@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-type Level = "Alle" | "Nemme" | "Svaere";
+type Level = "Alle" | "Nemme" | "Mellem" | "Svaere" | "Ekstreme";
 
 type Task = {
   id: string;
@@ -95,6 +95,86 @@ const tasks: Task[] = [
     description: "Rund scores ned til nærmeste 10-tal og læg dem sammen.",
     hint: "Eksempel: 27 bliver til 20.",
   },
+  {
+    id: "11",
+    title: "Fordel hold",
+    level: "Mellem",
+    functionName: "ceil",
+    description: "Find hvor mange hold der skal bruges, når alle skal have en plads.",
+    hint: "Start i opgaver/mellem/01-personer.ts",
+  },
+  {
+    id: "12",
+    title: "Nærmeste 10-tal",
+    level: "Mellem",
+    functionName: "floor",
+    description: "Rund et tal ned til nærmeste 10-tal.",
+    hint: "Start i opgaver/mellem/02-trin.ts",
+  },
+  {
+    id: "13",
+    title: "Afrundet gennemsnit",
+    level: "Mellem",
+    functionName: "reduce + round",
+    description: "Find gennemsnittet og rund det til nærmeste hele tal.",
+    hint: "Start i opgaver/mellem/03-gennemsnit.ts",
+  },
+  {
+    id: "14",
+    title: "Tilfældigt interval",
+    level: "Mellem",
+    functionName: "random + floor",
+    description: "Lav et tilfældigt helt tal, hvor både minimum og maksimum må bruges.",
+    hint: "Start i opgaver/mellem/04-tilfaeldigt-interval.ts",
+  },
+  {
+    id: "15",
+    title: "Dobbelt sum",
+    level: "Mellem",
+    functionName: "map + reduce",
+    description: "Fordobl alle tal og læg derefter resultaterne sammen.",
+    hint: "Start i opgaver/mellem/05-sum-af-gange.ts",
+  },
+  {
+    id: "16",
+    title: "Slutscore",
+    level: "Ekstreme",
+    functionName: "map + reduce + round",
+    description: "Rund scores ned og giv bonus, hvis gennemsnittet er højt nok.",
+    hint: "Start i opgaver/ekstreme/01-point.ts",
+  },
+  {
+    id: "17",
+    title: "Flere varekasser",
+    level: "Ekstreme",
+    functionName: "map + ceil + reduce",
+    description: "Beregn samlet antal kasser for flere forskellige varetyper.",
+    hint: "Start i opgaver/ekstreme/02-kasser.ts",
+  },
+  {
+    id: "18",
+    title: "Terningegennemsnit",
+    level: "Ekstreme",
+    functionName: "random + reduce + round",
+    description: "Kast mange terninger, find summen, og rund gennemsnittet.",
+    hint: "Start i opgaver/ekstreme/03-terning.ts",
+  },
+  {
+    id: "19",
+    title: "Flere rabatter",
+    level: "Ekstreme",
+    functionName: "reduce + floor",
+    description: "Anvend flere rabatter efter hinanden og rund kun til sidst.",
+    hint: "Start i opgaver/ekstreme/04-rabat.ts",
+  },
+  {
+    id: "20",
+    title: "Bedste score",
+    level: "Ekstreme",
+    functionName: "map + floor + max",
+    description: "Find den største score efter afrunding til nærmeste 10-tal.",
+    hint: "Start i opgaver/ekstreme/05-bedste.ts",
+  },
 ];
 
 function App() {
@@ -108,7 +188,7 @@ function App() {
         <div className="logo">
           math<span>/</span>lab
         </div>
-        <div className="progress">10 øvelser · skriv kode · test dig selv</div>
+        <div className="progress">20 øvelser · skriv kode · test dig selv</div>
       </header>
       <main className="content">
         <div className="eyebrow">JavaScript · matematiske funktioner</div>
@@ -119,7 +199,7 @@ function App() {
           `src/tests`.
         </p>
         <nav className="toolbar" aria-label="Filtrer opgaver">
-          {(["Alle", "Nemme", "Svaere"] as Level[]).map((option) => (
+          {(["Alle", "Nemme", "Mellem", "Svaere", "Ekstreme"] as Level[]).map((option) => (
             <button
               className={`filter ${level === option ? "active" : ""}`}
               key={option}
@@ -132,7 +212,7 @@ function App() {
           {visibleTasks.map((task) => (
             <article className="task-card" key={task.id}>
               <div className="card-top">
-                <span className="number">{task.id} / 10</span>
+                <span className="number">{task.id} / 20</span>
                 <span
                   className={`level ${task.level === "Svaere" ? "hard" : ""}`}>
                   {task.level}
