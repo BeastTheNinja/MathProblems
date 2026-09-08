@@ -4,7 +4,6 @@
 // Kombinér map, Math.abs og Math.max.
 
 export function størsteAfvigelse(tal: number[], mål: number): number {
-    void tal;
-    void mål;
-    return 0;
+    const afstande = tal.map(t => Math.abs(t - mål));
+    return Math.max(...afstande);
 }

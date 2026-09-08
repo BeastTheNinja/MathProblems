@@ -7,6 +7,9 @@
 type Analyse = { minimum: number; maksimum: number; gennemsnit: number };
 
 export function analyserScores(scores: number[]): Analyse {
-    void scores;
-    return { minimum: 0, maksimum: 0, gennemsnit: 0 };
+    const minimum = Math.min(...scores);
+    const maksimum = Math.max(...scores);
+    const sum = scores.reduce((acc, curr) => acc + curr, 0);
+    const gennemsnit = Math.round(sum / scores.length);
+    return { minimum, maksimum, gennemsnit };
 }

@@ -3,8 +3,6 @@
 // Brug filter og arrayets length.
 
 export function taelIInterval(tal: number[], minimum: number, maksimum: number): number {
-    void tal;
-    void minimum;
-    void maksimum;
-    return 0;
+    const talIMellem = tal.filter(t => t >= minimum && t <= maksimum);
+    return talIMellem.length;
 }

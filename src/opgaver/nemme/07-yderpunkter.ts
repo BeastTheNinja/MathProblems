@@ -6,6 +6,7 @@
 type Resultat = { mindste: number; største: number };
 
 export function yderpunkter(tal: number[]): Resultat {
-    void tal;
-    return { mindste: 0, største: 0 };
+    const mindste = Math.min(...tal);
+    const største = Math.max(...tal);
+    return { mindste, største };
 }

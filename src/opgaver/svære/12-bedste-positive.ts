@@ -3,6 +3,10 @@
 // Brug filter, reduce og Math.round.
 
 export function gennemsnitAfPositiveScores(scores: number[]): number {
-    void scores;
-    return 0;
+    const positiveScores = scores.filter(score => score > 0);
+    if (positiveScores.length === 0) {
+        return 0;
+    }
+    const sum = positiveScores.reduce((acc, curr) => acc + curr, 0);
+    return Math.round(sum / positiveScores.length);
 }

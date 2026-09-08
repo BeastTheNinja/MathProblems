@@ -3,6 +3,6 @@
 // Nyt værktøj: filter.
 
 export function sumPositive(tal: number[]): number {
-    void tal;
-    return 0;
+    const positiveTal = tal.filter(t => t > 0);
+    return positiveTal.reduce((acc, curr) => acc + curr, 0);
 }

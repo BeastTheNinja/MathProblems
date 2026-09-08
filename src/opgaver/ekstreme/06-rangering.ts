@@ -3,6 +3,5 @@
 // Brug spread, sort og en sammenligningsfunktion.
 
 export function rangering(scores: number[]): number[] {
-    void scores;
-    return [];
+    return [...scores].sort((a, b) => b - a);
 }

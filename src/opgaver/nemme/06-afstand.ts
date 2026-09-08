@@ -4,7 +4,6 @@
 // Nyt værktøj: Math.abs.
 
 export function afstand(førsteTal: number, andetTal: number): number {
-    void førsteTal;
-    void andetTal;
-    return 0;
+    
+    return Math.abs(førsteTal - andetTal);
 }
