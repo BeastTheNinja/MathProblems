@@ -3,7 +3,5 @@
 
 export function antalKasser(antalTing: number, tingPrKasse: number): number {
     // Brug division og Math.ceil.
-    void antalTing;
-    void tingPrKasse;
-    return 0;
+    return Math.ceil(antalTing / tingPrKasse);
 }

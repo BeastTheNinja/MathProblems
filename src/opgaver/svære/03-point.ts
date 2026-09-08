@@ -3,6 +3,5 @@
 
 export function samletScore(point: number[]): number {
     // Brug Math.random, Math.floor og reduce.
-    void point;
-    return 0;
+    return point.reduce((acc, curr) => acc + curr, 0) + Math.floor(Math.random() * 41) + 10;
 }

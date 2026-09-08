@@ -3,6 +3,5 @@
 
 export function samletHighscore(scores: number[]): number {
     // Brug map, Math.floor og reduce.
-    void scores;
-    return 0;
+    return scores.map(score => Math.floor(score / 10) * 10).reduce((acc, curr) => acc + curr, 0);
 }

@@ -3,7 +3,7 @@
 
 export function prisEfterRabat(pris: number, rabat: number): number {
     // Kombinér procentregning med Math.floor.
-    void pris;
-    void rabat;
-    return 0;
+
+    return Math.floor(pris * (1 - rabat / 100));
+
 }

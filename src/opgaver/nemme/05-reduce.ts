@@ -2,7 +2,9 @@
 // Eksempel: [2, 3, 5] skal give 10.
 
 
-// reduce() tager en callback funktion som første argument, og et initialt værdi som andet argument.
+// acc er det samlede resultat.
+// curr er det aktuelle tal i arrayet.
+// 0 er startværdien.
 
 export function laegSammen(tal: number[]): number {
     // Skriv din løsning her.

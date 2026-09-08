@@ -3,6 +3,5 @@
 
 export function afrundetGennemsnit(tal: number[]): number {
     // Brug reduce til summen og Math.ceil til sidst.
-    void tal;
-    return 0;
+    return Math.ceil(tal.reduce((acc, curr) => acc + curr, 0) / tal.length);
 }
