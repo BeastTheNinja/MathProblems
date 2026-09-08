@@ -175,6 +175,70 @@ const tasks: Task[] = [
     description: "Find den største score efter afrunding til nærmeste 10-tal.",
     hint: "Start i opgaver/ekstreme/05-bedste.ts",
   },
+  {
+    id: "21",
+    title: "Afstand mellem tal",
+    level: "Nemme",
+    functionName: "Math.abs",
+    description: "Find afstanden mellem to tal, uanset hvilket tal der kommer først.",
+    hint: "Start i opgaver/nemme/06-afstand.ts",
+  },
+  {
+    id: "22",
+    title: "Yderpunkter",
+    level: "Nemme",
+    functionName: "Math.min + Math.max",
+    description: "Find det mindste og største tal i et array.",
+    hint: "Start i opgaver/nemme/07-yderpunkter.ts",
+  },
+  {
+    id: "23",
+    title: "Sum af positive tal",
+    level: "Mellem",
+    functionName: "filter + reduce",
+    description: "Filtrér negative tal væk og læg resten sammen.",
+    hint: "Start i opgaver/mellem/06-positive-sum.ts",
+  },
+  {
+    id: "24",
+    title: "Tal i interval",
+    level: "Mellem",
+    functionName: "filter + length",
+    description: "Tæl hvor mange tal der ligger mellem to grænser.",
+    hint: "Start i opgaver/mellem/07-tael-interval.ts",
+  },
+  {
+    id: "25",
+    title: "Største afvigelse",
+    level: "Svaere",
+    functionName: "map + abs + max",
+    description: "Find den største afstand fra et bestemt mål.",
+    hint: "Start i opgaver/svære/11-afvigelse.ts",
+  },
+  {
+    id: "26",
+    title: "Positive scores",
+    level: "Svaere",
+    functionName: "filter + reduce + round",
+    description: "Find gennemsnittet af scores over nul og rund resultatet.",
+    hint: "Start i opgaver/svære/12-bedste-positive.ts",
+  },
+  {
+    id: "27",
+    title: "Score-rangering",
+    level: "Ekstreme",
+    functionName: "spread + sort",
+    description: "Sortér scores fra størst til mindst uden at ændre input-arrayet.",
+    hint: "Start i opgaver/ekstreme/06-rangering.ts",
+  },
+  {
+    id: "28",
+    title: "Score-analyse",
+    level: "Ekstreme",
+    functionName: "min + max + reduce",
+    description: "Returnér minimum, maksimum og afrundet gennemsnit samlet i et objekt.",
+    hint: "Start i opgaver/ekstreme/07-analyse.ts",
+  },
 ];
 
 function App() {
@@ -188,7 +252,7 @@ function App() {
         <div className="logo">
           math<span>/</span>lab
         </div>
-        <div className="progress">20 øvelser · skriv kode · test dig selv</div>
+        <div className="progress">28 øvelser · skriv kode · test dig selv</div>
       </header>
       <main className="content">
         <div className="eyebrow">JavaScript · matematiske funktioner</div>
@@ -212,7 +276,7 @@ function App() {
           {visibleTasks.map((task) => (
             <article className="task-card" key={task.id}>
               <div className="card-top">
-                <span className="number">{task.id} / 20</span>
+                <span className="number">{task.id} / 28</span>
                 <span
                   className={`level ${task.level === "Svaere" ? "hard" : ""}`}>
                   {task.level}
