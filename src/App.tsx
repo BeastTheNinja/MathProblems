@@ -239,6 +239,102 @@ const tasks: Task[] = [
     description: "Returnér minimum, maksimum og afrundet gennemsnit samlet i et objekt.",
     hint: "Start i opgaver/ekstreme/07-analyse.ts",
   },
+  {
+    id: "29",
+    title: "Ned til 10-tal",
+    level: "Nemme",
+    functionName: "Math.floor",
+    description: "Rund et tal ned til nærmeste 10-tal.",
+    hint: "Start i opgaver/nemme/08-floor-ti.ts",
+  },
+  {
+    id: "30",
+    title: "Antal pakker",
+    level: "Nemme",
+    functionName: "Math.ceil",
+    description: "Find hvor mange hele pakker der skal bruges.",
+    hint: "Start i opgaver/nemme/09-ceil-pakker.ts",
+  },
+  {
+    id: "31",
+    title: "Rund til mål",
+    level: "Nemme",
+    functionName: "Math.round",
+    description: "Rund et decimaltal til nærmeste hele tal.",
+    hint: "Start i opgaver/nemme/10-round-maal.ts",
+  },
+  {
+    id: "32",
+    title: "Gang alle tal",
+    level: "Mellem",
+    functionName: "reduce",
+    description: "Brug reduce til at gange alle tal i et array.",
+    hint: "Start i opgaver/mellem/08-reduce-produkt.ts",
+  },
+  {
+    id: "33",
+    title: "Tilfældigt 10 til 20",
+    level: "Mellem",
+    functionName: "random + floor",
+    description: "Lav et tilfældigt helt tal i et fast interval.",
+    hint: "Start i opgaver/mellem/09-random-interval.ts",
+  },
+  {
+    id: "34",
+    title: "Afrundet gennemsnit",
+    level: "Mellem",
+    functionName: "reduce + round",
+    description: "Beregn et gennemsnit og rund det til nærmeste heltal.",
+    hint: "Start i opgaver/mellem/10-round-gennemsnit.ts",
+  },
+  {
+    id: "35",
+    title: "Hele priser",
+    level: "Svaere",
+    functionName: "map + floor + reduce",
+    description: "Rund hver pris ned og læg de hele priser sammen.",
+    hint: "Start i opgaver/svære/13-floor-priser.ts",
+  },
+  {
+    id: "36",
+    title: "Hele minutter",
+    level: "Svaere",
+    functionName: "map + ceil + reduce",
+    description: "Rund hver aktivitet op til hele minutter før summen.",
+    hint: "Start i opgaver/svære/14-ceil-tid.ts",
+  },
+  {
+    id: "37",
+    title: "Flere terninger",
+    level: "Svaere",
+    functionName: "random + reduce",
+    description: "Kast flere terninger og læg alle øjne sammen.",
+    hint: "Start i opgaver/svære/15-random-terninger.ts",
+  },
+  {
+    id: "38",
+    title: "Rundingsrapport",
+    level: "Ekstreme",
+    functionName: "floor + ceil + round + reduce",
+    description: "Lav tre forskellige summer med tre forskellige afrundinger.",
+    hint: "Start i opgaver/ekstreme/08-rundingsrapport.ts",
+  },
+  {
+    id: "39",
+    title: "Terningegennemsnit",
+    level: "Ekstreme",
+    functionName: "random + reduce + round",
+    description: "Kast mange terninger og rund gennemsnittet.",
+    hint: "Start i opgaver/ekstreme/09-random-gennemsnit.ts",
+  },
+  {
+    id: "40",
+    title: "Rabatter med reduce",
+    level: "Ekstreme",
+    functionName: "reduce + floor",
+    description: "Anvend flere rabatter efter hinanden og rund kun til sidst.",
+    hint: "Start i opgaver/ekstreme/10-reduce-rabat.ts",
+  },
 ];
 
 function App() {
@@ -252,7 +348,7 @@ function App() {
         <div className="logo">
           math<span>/</span>lab
         </div>
-        <div className="progress">28 øvelser · skriv kode · test dig selv</div>
+        <div className="progress">40 øvelser · skriv kode · test dig selv</div>
       </header>
       <main className="content">
         <div className="eyebrow">JavaScript · matematiske funktioner</div>
@@ -276,7 +372,7 @@ function App() {
           {visibleTasks.map((task) => (
             <article className="task-card" key={task.id}>
               <div className="card-top">
-                <span className="number">{task.id} / 28</span>
+                <span className="number">{task.id} / 40</span>
                 <span
                   className={`level ${task.level === "Svaere" ? "hard" : ""}`}>
                   {task.level}
