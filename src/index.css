@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: "Space Grotesk", sans-serif;
+  color: #1f2933;
+  background: #f4f1ea;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 0%, #d9eee7 0, transparent 32rem), #f4f1ea;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px clamp(20px, 6vw, 88px);
+  border-bottom: 1px solid #d8d5cd;
+}
+.logo {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-size: 1.35rem;
+}
+.logo span {
+  color: #db5a42;
+}
+.progress {
+  font-family: "DM Mono", monospace;
+  font-size: 0.78rem;
+  color: #68737c;
+}
+.content {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 64px clamp(20px, 6vw, 88px) 90px;
+}
+.eyebrow {
+  color: #db5a42;
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+h1 {
+  max-width: 750px;
+  margin: 12px 0 18px;
+  font-size: clamp(2.7rem, 7vw, 6.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.075em;
+}
+.intro {
+  max-width: 590px;
+  color: #68737c;
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 42px 0 24px;
+}
+.filter {
+  border: 1px solid #c9c6bd;
+  border-radius: 999px;
+  background: transparent;
+  color: #68737c;
+  padding: 9px 15px;
+  cursor: pointer;
+}
+.filter.active,
+.filter:hover {
+  color: #fff;
+  background: #1f2933;
+  border-color: #1f2933;
+}
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 14px;
+}
+.task-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 295px;
+  padding: 22px;
+  border: 1px solid #d8d5cd;
+  background: rgba(255, 255, 255, 0.58);
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+.task-card:hover {
+  transform: translateY(-4px);
+  border-color: #db5a42;
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.number {
+  color: #a0a5a6;
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+}
+.level {
+  padding: 5px 8px;
+  font-family: "DM Mono", monospace;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  background: #e8dfc8;
+}
+.level.hard {
+  color: #9a3927;
+  background: #f4d1c8;
+}
+.task-card h2 {
+  margin: 0 0 11px;
+  font-size: 1.35rem;
+  letter-spacing: -0.04em;
+}
+.task-card p {
+  margin: 0;
+  color: #68737c;
+  line-height: 1.5;
+}
+.hint {
+  margin-top: auto !important;
+  padding-top: 22px;
+  color: #1f2933 !important;
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+}
+.footer-note {
+  margin-top: 38px;
+  color: #68737c;
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+}
+@media (max-width: 600px) {
+  .topbar {
+    padding: 20px;
+  }
+  .content {
+    padding: 44px 20px 60px;
+  }
+  h1 {
+    font-size: 3.4rem;
+  }
+  .progress {
+    display: none;
+  }
+}
